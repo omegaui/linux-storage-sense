@@ -87,7 +87,7 @@ can use **storage-sense** to automate the task as it also supports **seconds** a
 **Linux One Liner Install Command**
 
 ```shell
-curl https://raw.githubusercontent.com/omegaui/linux-storage-sense/main/install.sh | sh
+curl https://raw.githubusercontent.com/omegaui/linux-storage-sense/main/installer.sh | sh
 ```
 
 **NOTE: Time calculations are based on the system up time and not the realtime date**
