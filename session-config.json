@@ -1,0 +1,14 @@
+{
+  "watchers": [
+    {
+      "path": "/home/omegaui/VS Code Projects/linux-storage-sense/bin/main",
+      "timePeriod": 20087,
+      "timeUnit": "s"
+    },
+    {
+      "path": "/home/omegaui/VS Code Projects/linux-storage-sense/update-config.sh",
+      "timePeriod": 4058,
+      "timeUnit": "d"
+    }
+  ]
+}
