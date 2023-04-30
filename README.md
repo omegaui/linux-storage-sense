@@ -128,6 +128,6 @@ echo "a system restart is required initially for the daemon to start!"
 
 The Installer downloads the latest configurator and daemon binaries from the repo to `/usr/bin` and makes them 
 executable with chmod, and it also configures the daemon to autostart when you log in, moreover, it also configures  
-the default session by creating the `storage-sense` directory in `~/.config` and downloading the 
+the default session by creating the `storage-sense` directory in `~/.config` and downloading the `session-config.json`. 
 
 ### NOTE: Time calculations are based on the system up time and not the realtime date
