@@ -88,7 +88,6 @@ pub fn start() {
 		time.sleep(delta * time.millisecond)
 		seconds++
 		snapshot.total_seconds++
-		println(snapshot.total_seconds)
 		monitor_watchdogs(snapshot.total_seconds, 'seconds')
 		if seconds == 60 {
 			minutes++
