@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Linux Storage Sense Daemon
+Exec=/usr/bin/storage-sense-daemon
+Version=1.0
+Type=Application
+Categories=Storage
+Terminal=false

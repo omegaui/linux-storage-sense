@@ -33,7 +33,7 @@ fn create_default_session() {
 fn main() {
 	mut app := cli.Command{
 		name: 'storage-sense-config'
-		description: 'Storage Sense Configurator version 1.0.0'
+		description: 'Storage Sense Configurator version 1.0.1'
 		execute: fn (cmd cli.Command) ! {
 			create_default_session()
 
@@ -56,7 +56,7 @@ fn main() {
 
 			if provided_options == 0 {
 				config_path := '${os.home_dir()}/.config/storage-sense/session-config.json'
-				display.println(text: 'Storage Sense Configurator v1.0.0', style: codes.bold)
+				display.println(text: 'Storage Sense Configurator v1.0.1', style: codes.bold)
 				display.println(
 					text: 'config: ${config_path}\n'
 					style: codes.dim

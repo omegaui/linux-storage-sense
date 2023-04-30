@@ -7,7 +7,7 @@ import os
 fn main() {
 	mut app := cli.Command{
 		name: 'storage-sense-daemon'
-		description: 'Storage Sense Daemon version 1.0.0'
+		description: 'Storage Sense Daemon version 1.0.1'
 		execute: fn (cmd cli.Command) ! {
 			daemon.launch_timer()
 		}

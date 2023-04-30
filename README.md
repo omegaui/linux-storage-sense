@@ -89,5 +89,45 @@ can use **storage-sense** to automate the task as it also supports **seconds** a
 ```shell
 curl https://raw.githubusercontent.com/omegaui/linux-storage-sense/main/installer.sh | sh
 ```
+<div align="center">
+    <h4>installer.sh</h4>
+</div>
 
-**NOTE: Time calculations are based on the system up time and not the realtime date**
+```shell
+
+#!/bin/bash
+
+echo "* The Installer requires administration access"
+
+echo "Setting up default session config ..."
+cd ~/.config
+mkdir storage-sense
+cd storage-sense
+wget https://raw.githubusercontent.com/omegaui/linux-storage-sense/main/bin/storage-sense-config.json
+
+echo "Setting up autostart ..."
+cd ~/.config/autostart
+wget https://raw.githubusercontent.com/omegaui/linux-storage-sense/main/bin/linux-storage-sense.desktop
+
+echo "Downloading Storage Sense Configurator ..."
+sudo wget https://raw.githubusercontent.com/omegaui/linux-storage-sense/main/bin/storage-sense-config --output-document=/usr/bin/storage-sense-config
+
+echo "Stopping Daemon (if running) ..."
+pkill -f storage-sense-daemon
+
+echo "Downloading Storage Sense Daemon ..."
+sudo wget https://raw.githubusercontent.com/omegaui/linux-storage-sense/main/bin/storage-sense-daemon --output-document=/usr/bin/storage-sense-daemon
+
+sudo chmod 0755 /usr/bin/storage-sense-config
+sudo chmod 0755 /usr/bin/storage-sense-daemon
+
+echo "All Set!"
+echo "Add some files with storage-sense-config command and then,"
+echo "a system restart is required initially for the daemon to start!"
+```
+
+The Installer downloads the latest configurator and daemon binaries from the repo to `/usr/bin` and makes them 
+executable with chmod, and it also configures the daemon to autostart when you log in, moreover, it also configures  
+the default session by creating the `storage-sense` directory in `~/.config` and downloading the 
+
+### NOTE: Time calculations are based on the system up time and not the realtime date
