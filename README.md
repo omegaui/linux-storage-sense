@@ -55,7 +55,7 @@ $ storage-sense-config --add="temp.txt:images"
 $ storage-sense-config --remove="temp.txt:images"
 ```
 
-the add flag, furher asks for the time peroid and time unit,
+the add flag, further asks for the time period and time unit,
 here's an example run:
 ```sh
 omegaui@asus:~$ storage-sense-config --add="/home/omegaui/VS Code Projects/linux-storage-sense/update-config.sh"
@@ -130,4 +130,4 @@ The Installer downloads the latest configurator and daemon binaries from the rep
 executable with chmod, and it also configures the daemon to autostart when you log in, moreover, it also configures  
 the default session by creating the `storage-sense` directory in `~/.config` and downloading the `session-config.json`. 
 
-### NOTE: Time calculations are based on the system up time and not the realtime date
+### NOTE: Time calculations are based on the system uptime and not the realtime date
